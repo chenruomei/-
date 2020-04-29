@@ -1,0 +1,25 @@
+{
+  "name": "xianyun",
+  "version": "1.0.0",
+  "description": "My terrific Nuxt.js project",
+  "author": "chenruomei",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "@nuxtjs/axios": "^5.3.6",
+    "axios": "^0.19.2",
+    "element-ui": "^2.12.0",
+    "less": "^3.11.1",
+    "less-loader": "^5.0.0",
+    "moment": "^2.24.0",
+    "nuxt": "^2.0.0",
+    "qrcode": "^1.4.4",
+    "vuex-persistedstate": "^3.0.1"
+  },
+  "devDependencies": {}
+}
