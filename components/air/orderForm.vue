@@ -169,7 +169,6 @@ export default {
       price += this.detail.airport_tax_audlet;
 
       //表单的参数的保险id和机票的详细信息中的保险id相同的时候
-      //表单的参数的保险id和机票的详细信息中的保险id相同的时候
       // 循环选中的保险id获取保险的价格
       this.form.insurances.forEach(v => {
         // 循环后台返回的保险列表
