@@ -335,10 +335,17 @@
 </template>
 
 <script>
+
 export default {
+  data() {
+    return {
+      start:0,
+      limit:5
+    }
+  },
   mounted(){
     this.$axios({
-      url:"/posts/comments?post=4&_start=0&_limit=5"
+      url:`/posts/comments?post=${this.$route.query.id}&_start=${this.start}&_limit=${this.limit}`
     }).then(res=>{
       console.log(res);
     })
