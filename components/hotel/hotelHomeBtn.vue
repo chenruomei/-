@@ -174,6 +174,7 @@ export default {
 data() {
   return {
     rate:3700,//进度条
+    value:'',
   }
 },//data
 };////
