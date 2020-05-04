@@ -335,7 +335,15 @@
 </template>
 
 <script>
-export default {};
+export default {
+  mounted(){
+    this.$axios({
+      url:"/posts/comments?post=4&_start=0&_limit=5"
+    }).then(res=>{
+      console.log(res);
+    })
+  }
+};
 </script>
 
 <style scoped lang="less">

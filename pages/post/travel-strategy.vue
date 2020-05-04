@@ -74,7 +74,7 @@ export default {
     }).then(res => {
       const { data } = res;
       this.contents = data;
-      console.log(this.contents);
+      // console.log(this.contents);
     });
     this.$axios({
       url: "posts/recommend"
@@ -82,7 +82,7 @@ export default {
       // console.log(res);
       const { data } = res.data;
       this.strategyList = data;
-      console.log(this.strategyList);
+      // console.log(this.strategyList);
     }); 
   },
   data() {
