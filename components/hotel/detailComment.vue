@@ -11,7 +11,7 @@
       <el-col :span="5">
         <div class="comment-star">
           <el-rate
-            v-model="value"
+            v-model="hotelData.stars"
             disabled
             show-score
             text-color="#ff9900"
@@ -30,12 +30,14 @@
 
 <script>
 export default {
+  props: ["hotelData"],
   data() {
     return {
       // 只读评分
       value: 4.5
     };
-  }
+  },
+  mounted() {}
 };
 </script>
 

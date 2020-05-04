@@ -6,32 +6,39 @@
       <el-col :span="20">
         <el-col :span="6">入住时间:14:00之后</el-col>
         <el-col :span="6">离店时间:12:00之前</el-col>
-        <el-col :span="6">2010年开业/2015年装修</el-col>
-        <el-col :span="6">酒店规模:148间客房</el-col>
+        <el-col :span="6">{{hotelData.creation_time}}/{{hotelData.renovat_time}}</el-col>
+        <el-col :span="6">酒店规模:{{hotelData.roomCount}}间客房</el-col>
       </el-col>
     </el-row>
     <el-row>
       <el-col :span="4">主要设施</el-col>
       <el-col :span="20">
-        <span>外币兑换服务</span>
-        <span>电梯</span>
-        <span>洗衣服务</span>
-        <span>热水壶</span>
+        <span
+          v-for="(item,index) in hotelData.hotelassets"
+          v-if="item.type==='主要设施'||item.type==='房间设施'"
+        >{{item.name}}</span>
       </el-col>
     </el-row>
     <el-row>
-      <el-col :span="4">停车服务</el-col>
-      <el-col :span="20">-</el-col>
+      <el-col :span="4">酒店服务</el-col>
+      <el-col :span="20">
+        <span v-for="(item,index) in hotelData.hotelassets" v-if="item.type==='酒店服务'">{{item.name}}</span>
+      </el-col>
     </el-row>
     <el-row>
       <el-col :span="4">品牌信息</el-col>
-      <el-col :span="20">-</el-col>
+      <el-col :span="20">
+        <span>{{hotelData.hoteltype.name}}</span>
+        <span>{{hotelData.hotellevel.name}}</span>
+      </el-col>
     </el-row>
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+  props: ["hotelData"]
+};
 </script>
 
 <style lang="less" scoped>

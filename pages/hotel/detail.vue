@@ -5,7 +5,7 @@
       <el-breadcrumb separator-class="el-icon-arrow-right">
         <el-breadcrumb-item :to="{ path: '/hotel' }">酒店</el-breadcrumb-item>
         <el-breadcrumb-item :to="{ path: '/hotel' }">南京酒店</el-breadcrumb-item>
-        <el-breadcrumb-item>城市便捷酒店</el-breadcrumb-item>
+        <el-breadcrumb-item>{{hotelData.breadcrumb}}</el-breadcrumb-item>
       </el-breadcrumb>
     </div>
 
@@ -38,7 +38,20 @@ export default {
   data() {
     return {
       // 酒店详情的数据
-      hotelData: []
+      hotelData: {
+        //   图片数据初始化
+        pics: [{}],
+        // 酒店价格初始化
+        products: [],
+        // 经纬度
+        location: {},
+        // 酒店主要设施
+        hotelassets: [{}],
+        // 酒店类型 - 显示品牌信息那一栏
+        hoteltype: [{}],
+        // 酒店星级 - 显示在品牌信息那一栏
+        hotellevel: [{}]
+      }
     };
   },
   components: {
@@ -51,14 +64,14 @@ export default {
   },
   mounted() {
     const { id } = this.$route.query;
-    console.log(id);
+    // console.log(id);
 
     // 发起请求
     this.$axios({
       url: `/hotels?id=${id}`
     }).then(res => {
       this.hotelData = res.data.data[0];
-      console.log(this.hotelData);
+      //   console.log(this.hotelData);
     });
   },
   methods: {

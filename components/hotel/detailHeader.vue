@@ -5,7 +5,7 @@
       {{hotelData.name}}
       <i
         class="iconfont icon-huangguan"
-        v-for="(item,index) in hotelData.num_collected"
+        v-for="(item,index) in hotelData.m_city_id"
       ></i>
     </h4>
     <div>{{hotelData.alias}}</div>
@@ -20,7 +20,7 @@
 export default {
   props: ["hotelData"],
   mounted() {
-    console.log(this.hotelData);
+    // console.log(this.hotelData);
   }
 };
 </script>
