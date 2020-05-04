@@ -118,6 +118,7 @@ export default {
     getCities() {},
     // 出发城市输入框获得焦点时触发
     // value 是选中的值，cb是回调函数，接收要展示的列表
+    //cd是个数组
     queryDepartSearch(value, cb) {
       if (!value) {
         //如果为空则不请求
@@ -132,14 +133,16 @@ export default {
           name: value
         } //带？的参数
       }).then(res => {
-        // console.log("机票",res);
+        //console.log("机票",res);
         const { data } = res.data;
-        //data的属性没有value,需要转换
+        //data的属性没有value属性,需要自己加上去
         const newData = data.map(v => {
           v.value = v.name.replace("市", "");
           return v;
         });
         this.departCitys = newData;
+        console.log('this.departCitys ',this.departCitys );
+        
         cb(newData); //请求成功之后菜调用
       });
     },
