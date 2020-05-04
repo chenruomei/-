@@ -1,8 +1,7 @@
 <template>
   <div class="con">
-     <!-- 进度条 -->
+    <!-- 进度条 -->
     <div class="fliter">
-
       <!-- 价格 -->
       <div class="price aa">
         <div class="price_top">
@@ -90,7 +89,7 @@
         </el-dropdown>
       </div>
     </div>
-    
+
     <!-- //酒店详情的列表 -->
     <div class="detail">
       <!-- 左边图片 -->
@@ -171,12 +170,12 @@
 
 <script>
 export default {
-data() {
-  return {
-    rate:3700,//进度条
-  }
-},//data
-};////
+  data() {
+    return {
+      rate: 3700 //进度条
+    };
+  } //data
+}; ////
 </script>
 
 <style scoped lang="less">
@@ -184,7 +183,6 @@ data() {
   width: 1000px;
   margin: 0 auto;
 }
-
 
 //进度条
 .fliter {
@@ -270,14 +268,14 @@ data() {
       right: -240px;
       top: 0px;
       p {
-          display: flex;
-          justify-content: space-between;
-          width: 200px;
-          padding: 10px;
-          border-bottom: 1px solid #000;
-        em{
-            color: orangered;
-            font-size: 17px;
+        display: flex;
+        justify-content: space-between;
+        width: 200px;
+        padding: 10px;
+        border-bottom: 1px solid #000;
+        em {
+          color: orangered;
+          font-size: 17px;
         }
       }
     }
