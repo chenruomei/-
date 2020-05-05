@@ -54,7 +54,7 @@
               </div>
               <div class="post-text">
                 <div>{{ item.title }}</div>
-                <p>{{ "时间"}} 阅读 {{ item.watch || 0  }}</p>
+                <p>{{ moment(item.created_at).format('YYYY-MM-DD hh:mm') }} 阅读 {{ item.watch || 0  }}</p>
               </div>
             </div>
           </a>
@@ -67,6 +67,7 @@
 <script>
 import Comments from "@/components/post/comments";
 import loginVue from "../user/login.vue";
+import moment from "moment"
 export default {
   mounted() {
     this.$axios({
@@ -82,11 +83,12 @@ export default {
       // console.log(res);
       const { data } = res.data;
       this.strategyList = data;
-      // console.log(this.strategyList);
+      console.log(this.strategyList);
     }); 
   },
   data() {
     return {
+      moment,
       contents: {
         city: {}
       },
