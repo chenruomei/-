@@ -89,6 +89,8 @@ export default {
       if (tab.index == 1) {
         // this.mapDataType = tab.name;
         this.mapDataType = "交通设施服务";
+        // console.log(tab.name);
+
         this.getMapservice(tab.name);
       }
     },
@@ -112,7 +114,7 @@ export default {
 
         var cpoint = [118.8718107, 31.32846821]; //中心点坐标
         placeSearch.searchNearBy("", cpoint, 10000, (status, result) => {
-          console.log(result);
+          // console.log(result);
           if (mapDataType == "风景名胜") {
             this.tourist = result.poiList.pois;
           }

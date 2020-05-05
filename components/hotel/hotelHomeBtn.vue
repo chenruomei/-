@@ -170,22 +170,12 @@
 
 <script>
 export default {
-<<<<<<< HEAD
   data() {
     return {
       rate: 3700 //进度条
     };
-  } //data
-}; ////
-=======
-data() {
-  return {
-    rate:3700,//进度条
-    value:'',
-  }
-},//data
-};////
->>>>>>> ce5b4fc2599be72684619570c3f23e1d5685b7b4
+  } 
+}; 
 </script>
 
 <style scoped lang="less">
