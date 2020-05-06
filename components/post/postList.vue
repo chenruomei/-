@@ -2,7 +2,7 @@
   <div class="airticle">
     <!-- 第一种结构，底部三张图片 -->
     <div class="type-1" v-if="listContent.images.length>2">
-      <nuxt-link :to="`post/detail?id=${listContent.id}`">
+      <nuxt-link :to="`post/travel-strategy?id=${listContent.id}`">
         <!-- 标题 -->
         <div class="header">
           <h4>{{listContent.title}}</h4>
